@@ -981,7 +981,7 @@ def per_user_worker_loop(user_id: int, wake_event: threading.Event, stop_event: 
                 except Exception:
                     pass
 
-            interval = 0.5 if total <= 150 else (0.6 if total <= 300 else 0.7)
+            interval = 1.0 if total <= 150 else (1.1 if total <= 300 else 1.2)
             est_seconds = int((total - sent) * interval)
             est_str = str(timedelta(seconds=est_seconds))
             try:
