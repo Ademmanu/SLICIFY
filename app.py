@@ -39,7 +39,7 @@ PERMANENT_SUSPEND_DAYS = int(os.environ.get("PERMANENT_SUSPEND_DAYS", "365"))
 
 TELEGRAM_API = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}" if TELEGRAM_TOKEN else None
 
-# Configure requests session with better SSL handling and retry logic
+# Configure requests session with better SSL handling and retry logic (good)
 _session = requests.Session()
 
 # Custom SSL context to handle various SSL issues
